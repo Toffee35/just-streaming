@@ -1,3 +1,7 @@
+"use client"
+
+import { usePathname } from 'next/navigation'
+
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -18,12 +22,14 @@ export default function StreamCard({
 }: {
   cardProps: CardProps
 }) {
+  const pathname = usePathname()
+
   return (
     <Link href={`/stream/${cardProps.id}`} className="flex flex-col gap-2 tracking-wider">
       <div className="relative aspect-video rounded-b-xl rounded-t-md overflow-hidden bg-gradient-to-br from-gsc-kesseki via-alp-iwa to-gsc-kesseki from-50% via-80% to-90%">
         <Image
           className="relative object-contain w-full"
-          src={`/${cardProps.banner}`}
+          src={`${pathname}${cardProps.banner}`}
           alt={`Stream banner ${cardProps.banner}`}
           loading = "lazy" fill />
 
