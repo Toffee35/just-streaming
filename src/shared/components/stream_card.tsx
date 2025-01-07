@@ -19,29 +19,31 @@ export default function StreamCard({
   cardProps: CardProps
 }) {
   return (
-    <Link href={`/stream/${cardProps.id}`} className="flex flex-col gap-2 tracking-wider">
+    <div className="flex flex-col gap-3">
       <div className="relative aspect-video rounded-b-xl rounded-t-md overflow-hidden bg-gradient-to-br from-gsc-kesseki via-alp-iwa to-gsc-kesseki from-50% via-80% to-90%">
-        <Image
-          className="relative object-contain w-full text-alp-usagi"
-          src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/${cardProps.banner}`}
-          alt={`Stream banner ${cardProps.banner}`}
-          loading = "lazy" fill />
+        <Link href={`/stream/${cardProps.id}`}>
+          <Image
+            className="relative text-alp-usagi"
+            src={`/${cardProps.banner}`}
+            alt={`Stream banner ${cardProps.banner}`}
+            loading = "lazy" fill />
+        </Link>
 
-        <div className="relative top-2 left-1.5 sm:top-1.5 sm:left-2.5 md:left-2 md:top-2 lg:left-2.5 w-fit px-2.5 sm:px-3 md:px-2 lg:px-3 rounded-md bg-gsc-yoru/75">
-          <span className="text-alp-usagi text-base leading-3">{cardProps.author}</span>
-        </div>
+        <Link href={`/account/${cardProps.author}`} className="relative left-2 top-1 w-fit px-4 py-px rounded-lg bg-gsc-yoru/70">
+          <span className={`${robotoFlex.className} text-alp-usagi text-base leading-3 align-middle`}>{cardProps.author}</span>
+        </Link>
       </div>
 
-      <div className={`${robotoFlex.className} px-1.5 sm:px-4 md:px-2 lg:px-3 2xl:px-4 flex flex-col gap-1`}>
-        <span className="text-acc-yuki text-xl truncate leading-5">
+      <div className="px-1 flex flex-col gap-2">
+        <Link href={`/stream/${cardProps.id}`} className={`${robotoFlex.className} text-acc-yuki text-xl truncate leading-4`}>
           {cardProps.title}
-        </span>
+        </Link>
 
-        <div className="px-0.5 sm:px-1 lg:px-1.5 2xl:px-2 flex justify-between text-gsc-okami text-base leading-4">
+        <div className={`${robotoFlex.className} px-1 flex justify-between text-gsc-okami leading-3`}>
           <span>Started {timeFormat(cardProps.started)}</span>
           <span>{countFormat(cardProps.viewers)} Viewers</span>
         </div>
       </div>
-    </Link>
+    </div>
   )
 }

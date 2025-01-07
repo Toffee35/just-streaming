@@ -12,11 +12,11 @@ export default async function StreamById({
     id: number
   }>
 }) {
-  const id = (await params).id
+  const name = (await params).id
 
   return (
     <div className="h-svh flex justify-center items-center p-8">
-      <span className={`${robotoFlex} text-5xl text-acc-yuki font-semibold`}>Stream ID: {id}</span>
+      <span className={`${robotoFlex} text-5xl text-acc-yuki font-semibold`}>Account Name: {name}</span>
     </div>
   )
 }
@@ -31,6 +31,6 @@ export async function generateMetadata({
   const id = (await params).id
 
   return {
-    title: `Stream ${id}`,
+    title: `Account ${id}`,
   }
 }

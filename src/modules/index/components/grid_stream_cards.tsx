@@ -7,7 +7,7 @@ export default async function GridStreamCards() {
   const cards = getCards(20)
 
   return (
-    <div className="px-2 sm:px-4 xl:px-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6 sm:gap-9 md:gap-7 xl:gap-8">
+    <div className="px-2 sm:px-1.5 md:px-4 lg:px-5 pt-3 md:pt-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-6 md:gap-x-5 2xl:gap-x-8 gap-y-6 md:gap-y-8 2xl:gap-y-10">
         {cards.map((props) => (
           <StreamCard key={props.id} cardProps={props} />
         ))}
