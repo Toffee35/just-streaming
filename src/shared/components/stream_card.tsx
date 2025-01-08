@@ -20,16 +20,23 @@ export default function StreamCard({
 }) {
   return (
     <div className="flex flex-col gap-3">
-      <div className="relative aspect-video rounded-b-xl rounded-t-md overflow-hidden bg-gradient-to-br from-gsc-kesseki via-alp-iwa to-gsc-kesseki from-50% via-80% to-90%">
+      <div className={
+        "relative overflow-hidden aspect-video " +
+        "rounded-b-xl rounded-t-md bg-gradient-to-br " +
+        "from-gsc-kesseki via-alp-iwa to-gsc-kesseki " +
+        "from-50% via-80% to-90%"}>
         <Link href={`/stream/${cardProps.id}`}>
           <Image
             className="relative text-alp-usagi"
-            src={`/${cardProps.banner}`}
+            src={`/stream/${cardProps.banner}`}
             alt={`Stream banner ${cardProps.banner}`}
             loading = "lazy" fill />
         </Link>
 
-        <Link href={`/account/${cardProps.author}`} className="relative left-2 top-1 w-fit px-4 py-px rounded-lg bg-gsc-yoru/70">
+        <Link href={`/account/${cardProps.author}`} className={
+          "relative left-2 top-1 " +
+          "w-fit px-4 py-px " +
+          "rounded-lg bg-gsc-yoru/70"}>
           <span className={`${robotoFlex.className} text-alp-usagi text-base leading-3 align-middle`}>{cardProps.author}</span>
         </Link>
       </div>
@@ -39,7 +46,10 @@ export default function StreamCard({
           {cardProps.title}
         </Link>
 
-        <div className={`${robotoFlex.className} px-1 flex justify-between text-gsc-okami leading-3`}>
+        <div className={
+          `${robotoFlex.className} px-1 ` +
+          "flex justify-between " +
+          "text-gsc-okami leading-3"}>
           <span>Started {timeFormat(cardProps.started)}</span>
           <span>{countFormat(cardProps.viewers)} Viewers</span>
         </div>

@@ -11,7 +11,9 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-3 sm:gap-4 lg:gap-5 2xl:gap-7">
+    <div className={
+      "flex flex-col " +
+      "gap-5 sm:gap-6 lg:gap-7 2xl:gap-8"}>
       <Welcome />
       <GridStreamCards />
     </div>
