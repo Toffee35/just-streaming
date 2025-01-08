@@ -2,6 +2,8 @@ import Owner from '@/modules/layouts/components/owner'
 
 import '@/modules/layouts/styles/global.css'
 
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 
 export default function RootLayout({
   children
@@ -19,6 +21,8 @@ export default function RootLayout({
         {children}
       
         <Owner />
+
+        <SpeedInsights />
       </body>
     </html>
   );
