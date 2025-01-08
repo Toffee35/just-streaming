@@ -30,7 +30,7 @@ export default function Owner() {
         `${montserrat.className} ` +
         "transition-all duration-500 ease-out " +
         "text-alp-usagi font-medium text-lg leading-6 " +
-        (open ? "w-[100] opacity-100" : "w-[0] opacity-0")
+        (open ? "w-[94.05px] opacity-100" : "w-[0px] opacity-0")
       }>@Toffee35</a>
     </div>
   )
