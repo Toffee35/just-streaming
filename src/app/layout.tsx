@@ -3,6 +3,7 @@ import Owner from '@/modules/layouts/components/owner'
 import '@/modules/layouts/styles/global.css'
 
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react"
 
 
 export default function RootLayout({
@@ -23,6 +24,7 @@ export default function RootLayout({
         <Owner />
 
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
