@@ -11,6 +11,7 @@ export default function RootLayout({
   return (
     <html className="w-full h-full">
       <body className={
+        "flex justify-center items-center " +
         "max-w-full min-h-full bg-gsc-yoru " +
         "px-3 sm:px-4 lg:px-5 2xl:pt-6 " +
         "pt-4 sm:pt-5 lg:pt-6 2xl:pt-7 " +

@@ -15,9 +15,7 @@ export default async function StreamById({
   const id = (await params).id
 
   return (
-    <div className="h-full flex justify-center items-center px-8">
-      <span className={`${robotoFlex} text-5xl text-acc-yuki font-semibold`}>Stream ID: {id}</span>
-    </div>
+    <span className={`${robotoFlex} text-5xl text-acc-yuki font-semibold`}>Stream ID: {id}</span>
   )
 }
 
