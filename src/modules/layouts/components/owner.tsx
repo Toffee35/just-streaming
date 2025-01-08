@@ -28,7 +28,7 @@ export default function Owner() {
       
       <a href="https://github.com/Toffee35" className={
         `${montserrat.className} ` +
-        "transition-all duration-500 ease-out " +
+        "transition-all duration-500 ease-in " +
         "text-alp-usagi font-medium text-lg leading-6 " +
         (open ? "w-[94.05px] opacity-100" : "w-[0px] opacity-0")
       }>@Toffee35</a>
