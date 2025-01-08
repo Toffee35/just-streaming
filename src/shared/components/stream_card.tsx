@@ -34,15 +34,22 @@ export default function StreamCard({
         </Link>
 
         <Link href={`/account/${cardProps.author}`} className={
-          "relative left-2 top-1 " +
-          "w-fit px-4 py-px " +
-          "rounded-lg bg-gsc-yoru/70"}>
-          <span className={`${robotoFlex.className} text-alp-usagi text-base leading-3 align-middle`}>{cardProps.author}</span>
+          "relative left-2 top-1 px-4 py-0.5 " +
+          "rounded-lg bg-gsc-yoru/90"}>
+          <span className={
+            `${robotoFlex.className} ` +
+            "text-alp-usagi text-base"}>
+            {cardProps.author}
+          </span>
         </Link>
       </div>
 
       <div className="px-1 flex flex-col gap-2">
-        <Link href={`/stream/${cardProps.id}`} className={`${robotoFlex.className} text-acc-yuki text-xl truncate leading-4`}>
+        <Link
+          href={`/stream/${cardProps.id}`}
+          className={
+            `${robotoFlex.className} ` +
+            "text-acc-yuki text-xl truncate leading-4"}>
           {cardProps.title}
         </Link>
 
